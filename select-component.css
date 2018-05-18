@@ -1,0 +1,87 @@
+/*通用样式*/
+* {
+	margin: 0;
+	padding: 0;
+	color: #888;
+	font-size: 24px;
+	list-style: none;
+}
+/*最外层元素*/
+.wrapper {
+	width: 452px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+/*用户输入部分和下拉按钮*/
+.input-box {
+	display: inline-block;
+}
+.input-box input {
+	text-indent: 10px;
+	outline: none;
+	height: 40px;
+	width: 400px;
+	line-height: 40px;
+	vertical-align: top;
+}
+.input-box .btn {
+	display: inline-block;
+	height: 44px;
+	width: 48px;
+	background-color: #888;
+	border-radius: 0 4px 4px 0;
+	text-align: center;
+	padding-top: 16px;
+	box-sizing: border-box;
+	cursor: pointer;
+	opacity: 0.8;
+}
+.input-box .btn:hover {
+	opacity: 1;
+}
+.input-box .btn .triangle {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 12px solid transparent;
+	border-top-color: #666;
+	transform-origin: 50% 25%;
+	transform: rotateX(0deg);
+	transition: transform 400ms ease;
+}
+.input-box .btn .triangle.rotate {
+	transform: rotateX(180deg);
+}
+
+/*结果显示部分样式*/
+.result-box-wrapper {
+	overflow: hidden;
+}
+.result-box {
+	width: 404px;
+	margin-top: -5px; 
+	transition: all 400ms ease-out;
+	opacity: 0;
+	transform: translateY(-100%); /*结果默认隐藏*/
+}
+/*结果显示时的样式*/
+.result-box.show {
+	opacity: 1;
+	transform: translateY(0%);
+}
+.result-box li {
+	font-size: 18px;
+	padding-left: 20px;
+	text-align: left;
+	border: 1px solid #ccc;
+	border-top: none;
+	transition: transform 0.4s ease;
+}
+
+span {
+	font-size: 18px;
+}
+.redWords {
+	color: #F67280;
+}
